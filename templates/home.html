@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Мое портфолио</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Подключение Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Навигационное меню -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Мое портфолио</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">О себе</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Мои работы</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Главный контент страницы -->
+	<div class="container my-5">
+		<h1 class="text-center">Привет, я Иван!</h1>
+		<p class="text-center">Я занимаюсь веб-раз��аботкой и дизайном уже более 5 лет.</p>
+
+		<hr>
+
+		<h2>Некоторые из моих работ:</h2>
+
+		<!-- Список работ -->
+		<div class="row mt-5">
+			<div class="col-md-4 col-sm-12 mb-4">
+				<div class="card">
+					<img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Сайт для ресторана</h5>
+						<p class="card-text">Мой первый проект на Bootstrap.</p>
+						<a href="#" class="btn btn-primary">Посмотреть</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 mb-4">
+				<div class="card">
+					<img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Сайт для бутика одежды</h5>
+						<p class="card-text">Мой последний проект на Bootstrap.</p>
+						<a href="#" class="btn btn-primary">Посмотреть</a>
+					</div>
+				</div>
+			</div>
+   <div class="col-md-4 col-sm-12 mb-4">
+				<div class="card">
+					<img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Лендинг для туристической компании</h5>
+						<p class="card-text">Мой любимый проект, сделанный на Bootstrap.</p>
+						<a href="#" class="btn btn-primary">Посмотреть</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<!-- Форма обратной связи -->
+		<h2 class="mt-5">Связаться со мной</h2>
+		<form>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Ваше имя</label>
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите имя">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Ваш email</label>
+				<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Введите email">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Ваше сообщение</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Отправить</button>
+		</form>
+	</div>
+
+	<!-- Подключение jQuery и JavaScript-плагинов Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
