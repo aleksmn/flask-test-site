@@ -9,7 +9,9 @@
   <style>
     body {
       font-size: 18px;
-      font-family: sans-serif;
+      font-family: monospace;
+      background-color: #0B2447;
+      color:white;
     }
 
     .container {
@@ -23,17 +25,36 @@
     h1 {
       text-align: center;
       font-size: 40px;
-      color: slateblue;
+      color: #A5D7E8;
     }
 
     h2 {
       text-align: center;
       font-size: 30px;
-      color: slateblue;
+      color: #A5D7E8;
     }
 
     p {
-      line-height: 1.4;
+      line-height: 1.5;
+    }
+
+    .project img {
+      border-radius: 10px;
+      width: 500px;
+      max-width:100%;
+    }
+
+    .project .techs {
+      font-size: 14px;
+      font-weight: bold;
+      
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid grey;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     footer {
@@ -58,14 +79,35 @@
     
     <h2>Портфолио</h2>
     
-    <h3>Проект 1</h3>
+<!--     <h3>Проект 1</h3>
     <p>Описание проекта</p>
     
     <h3>Проект 2</h3>
     <p>Описание проекта</p>
     
     <h3>Проект 3</h3>
-    <p>Описание проекта</p>
+    <p>Описание проекта</p> -->
+
+
+<!--     {{projects}} -->
+
+
+    {% for project in projects %}
+    <div class="project">
+      
+      <h3>{{project.title}}</h3>
+      <img src="static/{{project.image}}" alt="">
+      <p>{{project.description}}</p>
+
+      {% if 'techs' in project %}
+
+      <p class='techs'>Технологии: {{project.techs}}</p>
+      
+      {% endif %}
+
+      <hr>
+    </div>
+    {% endfor %}
     
     <h2>Контакты</h2>
     <p>Спасибо, что посетили мой сайт! Если у вас есть какие-либо вопросы или идеи, не стесняйтесь связаться со мной. Я всегда рад новым знакомствам и возможностям сотрудничества.</p>
