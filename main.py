@@ -1,6 +1,6 @@
 from flask import Flask, render_template
-from database import engine
-from sqlalchemy import text
+from database import load_projects_from_db
+
 
 app = Flask(__name__)
 
@@ -24,24 +24,13 @@ app = Flask(__name__)
 # }]
 
 
-def load_projects_from_bd():
-  with engine.connect() as conn:
-    result = conn.execute(text("select * from projects"))
-  
-    result_dicts = []
-  
-    for row in result.all():
-      result_dicts.append(row._mapping)
-  
-  
-    return result_dicts
 
 
 
 @app.route("/")
 def index():
   # return "<p>Привет, это Flask</p>"
-  return render_template('index.html', projects=load_projects_from_bd())
+  return render_template('index.html', projects=load_projects_from_db())
 
 
 if __name__ == "__main__":

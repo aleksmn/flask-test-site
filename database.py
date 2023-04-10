@@ -1,11 +1,28 @@
 from sqlalchemy import create_engine, text
+import os 
 
-engine = create_engine(  "mysql+pymysql://9sd7fxi27uqit0x4rdno:pscale_pw_9bp8okXLxGatTvKEP49iYZXPkBWzFVrYvIhi3enmgMw@aws.connect.psdb.cloud/flask-test-site?charset=utf8mb4",
+engine = create_engine(os.environ['DB_CONNECTION_STRING'],
   connect_args={
     "ssl": {
       "ssl_ca": "/etc/ssl/cert.pem"
     }
   })
+
+
+def load_projects_from_db():
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from projects"))
+  
+    result_dicts = []
+  
+    for row in result.all():
+      result_dicts.append(row._mapping)
+  
+  
+    return result_dicts
+
+
+
 
 # with engine.connect() as conn:
 #   result = conn.execute(text("select * from projects"))
